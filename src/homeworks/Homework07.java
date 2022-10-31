@@ -1,6 +1,7 @@
 package homeworks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Homework07 {
@@ -157,8 +158,49 @@ public class Homework07 {
 
         System.out.println("\n---Task 9--\n");
 
-        //ArrayList<String> kitchen9
+        String [] kitchenObjects = {"Plate", "spoon", "fork", "Knife","cup","Mixer"};
+        ArrayList<String> kitchen = new ArrayList<>(Arrays.asList(kitchenObjects));
+        System.out.println(kitchen);
 
+       int upperCase = 0;
+       int lowerCase = 0;
+       int elementPorp = 0;
+       int elementStartsPorp = 0;
+
+
+        for (String element : kitchen) {
+            if(Character.isUpperCase(element.charAt(0)))upperCase++;
+            if(Character.isLowerCase(element.charAt(0)))lowerCase++;
+            if(element.toLowerCase().contains("p"))elementPorp++;
+            if(element.toLowerCase().startsWith("P"))elementStartsPorp++;
+        }
+        System.out.println("Elements that start with uppercase = "  + upperCase);
+        System.out.println("Elements that start with lowercase = " + lowerCase);
+        System.out.println("Elements having P or p = " + elementPorp);
+        System.out.println("Elements starting with P or p " + elementStartsPorp);
+
+        System.out.println("\n---Task 10---\n");
+
+        Integer [] numbers10 = {3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78};
+        ArrayList <Integer> task10 = new ArrayList<>(Arrays.asList(numbers10));
+        System.out.println(task10);
+
+        int elementsDivided10 = 0;
+        int elementsEvenAndGreaterThan15 = 0;
+        int elementsOddAndLessThan20 = 0;
+        int elementsLessThan15orGreaterThan50 = 0;
+
+        for(Integer element : numbers10){
+            if(element % 10 == 0)elementsDivided10++;
+            if(element % 2 == 0 && element > 15)elementsEvenAndGreaterThan15++;
+            if(element % 2 == 1 && element < 20)elementsOddAndLessThan20++;
+            if(element < 15 && element > 50)elementsLessThan15orGreaterThan50++;
+        }
+
+        System.out.println("Elements that can be divided by 10 = " + elementsDivided10);
+        System.out.println("Elements that are even and greater than 15 = " + elementsEvenAndGreaterThan15);
+        System.out.println("Elements that are odd and less than 20 = " + elementsOddAndLessThan20);
+        System.out.println("Elements that are less than 15 or greater than 50 = " + elementsLessThan15orGreaterThan50);
     }
 }
 
