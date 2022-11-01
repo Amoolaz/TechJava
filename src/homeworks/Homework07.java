@@ -172,12 +172,12 @@ public class Homework07 {
             if(Character.isUpperCase(element.charAt(0)))upperCase++;
             if(Character.isLowerCase(element.charAt(0)))lowerCase++;
             if(element.toLowerCase().contains("p"))elementPorp++;
-            if(element.toLowerCase().startsWith("P"))elementStartsPorp++;
+            if(element.toLowerCase().startsWith("P") || element.toLowerCase().endsWith("p")) elementStartsPorp++;
         }
         System.out.println("Elements that start with uppercase = "  + upperCase);
         System.out.println("Elements that start with lowercase = " + lowerCase);
         System.out.println("Elements having P or p = " + elementPorp);
-        System.out.println("Elements starting with P or p " + elementStartsPorp);
+        System.out.println("Elements starting with P or p = " + elementStartsPorp);
 
         System.out.println("\n---Task 10---\n");
 
